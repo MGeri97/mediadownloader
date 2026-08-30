@@ -1,14 +1,14 @@
 <?php
 
-namespace OCA\NCDownloader\Controller;
+namespace OCA\MediaDownloader\Controller;
 
 use \OCP\AppFramework\ApiController as API;
 use \OCP\IRequest;
 use \OCP\AppFramework\Http\JSONResponse;
 use \OCP\IL10N;
-use OCA\NCDownloader\Controller\MainController as Main;
-use OCA\NCDownloader\Controller\YtdlController as YTD;
-use OCA\NCDownloader\Controller\SearchController as Search;
+use OCA\MediaDownloader\Controller\MainController as Main;
+use OCA\MediaDownloader\Controller\YtdlController as YTD;
+use OCA\MediaDownloader\Controller\SearchController as Search;
 
 class ApiController extends API
 {
