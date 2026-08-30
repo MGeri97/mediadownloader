@@ -1,11 +1,12 @@
 <?php
-namespace OCA\NCDownloader\Controller;
 
-use OCA\NCDownloader\Aria2\Aria2;
-use OCA\NCDownloader\Tools\Counters;
-use OCA\NCDownloader\Db\Helper as DbHelper;
-use OCA\NCDownloader\Tools\folderScan;
-use OCA\NCDownloader\Tools\Helper;
+namespace OCA\MediaDownloader\Controller;
+
+use OCA\MediaDownloader\Aria2\Aria2;
+use OCA\MediaDownloader\Tools\Counters;
+use OCA\MediaDownloader\Db\Helper as DbHelper;
+use OCA\MediaDownloader\Tools\folderScan;
+use OCA\MediaDownloader\Tools\Helper;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\JSONResponse;
 use OCP\Files\IRootFolder;
@@ -127,7 +128,7 @@ class Aria2Controller extends Controller
     {
         return array(
             'name' => $name,
-            'path' => $this->urlGenerator->linkToRoute('ncdownloader.Aria2.Action', ['path' => $path]),
+            'path' => $this->urlGenerator->linkToRoute('mediadownloader.Aria2.Action', ['path' => $path]),
         );
     }
     /**
