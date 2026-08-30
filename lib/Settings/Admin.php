@@ -1,14 +1,14 @@
 <?php
 
-namespace OCA\NCDownloader\Settings;
+namespace OCA\MediaDownloader\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IConfig;
 use OCP\IDBConnection;
 use OCP\Settings\ISettings;
-use OCA\NCDownloader\Db\Settings;
-use OCA\NCDownloader\Tools\Helper;
+use OCA\MediaDownloader\Db\Settings;
+use OCA\MediaDownloader\Tools\Helper;
 
 
 class Admin implements ISettings
@@ -38,7 +38,7 @@ class Admin implements ISettings
 	{
 		$settings = Helper::getAllAdminSettings();
 		$settings +=  [
-			"path" => "/apps/ncdownloader/admin/save",
+			"path" => "/apps/mediadownloader/admin/save",
 			"aria2_version" => Helper::getAria2Version(),
 			"ytdl_version" => Helper::getYtdlVersion(),
 		];
@@ -46,7 +46,7 @@ class Admin implements ISettings
 			'settings' => $settings,
 			'options' => Helper::getAdminOptions($settings),
 		];
-		return new TemplateResponse('ncdownloader', 'settings/Admin', $parameters, '');
+		return new TemplateResponse('mediadownloader', 'settings/Admin', $parameters, '');
 	}
 
 	/**
@@ -54,7 +54,7 @@ class Admin implements ISettings
 	 */
 	public function getSection(): string
 	{
-		return 'ncdownloader';
+		return 'mediadownloader';
 	}
 
 	/**
