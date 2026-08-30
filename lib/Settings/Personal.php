@@ -1,14 +1,14 @@
 <?php
 
-namespace OCA\NCDownloader\Settings;
+namespace OCA\MediaDownloader\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IConfig;
 use OCP\IDBConnection;
 use OCP\Settings\ISettings;
-use OCA\NCDownloader\Db\Settings;
-use OCA\NCDownloader\Tools\Helper;
+use OCA\MediaDownloader\Db\Settings;
+use OCA\MediaDownloader\Tools\Helper;
 
 use OCP\IUserManager;
 
@@ -45,7 +45,7 @@ class Personal implements ISettings
 	 */
 	public function getForm()
 	{
-		$path = '/apps/ncdownloader/personal/save';
+		$path = '/apps/mediadownloader/personal/save';
 		$user = $this->userManager->get($this->uid);
 		$groupManager = \OC::$server->get(\OCP\IGroupManager::class);
 		$isAdmin = ($user !== null) ? $groupManager->isInGroup($user->getUID(), 'admin') : false;
@@ -81,7 +81,7 @@ class Personal implements ISettings
 		//\OC_Util::addScript($this->appName, 'common');
 		//\OC_Util::addScript($this->appName, 'settings/personal');
 		//file_put_contents("/tmp/re.log",print_r($parameters,true));
-		return new TemplateResponse('ncdownloader', 'settings/Personal', $parameters, '');
+		return new TemplateResponse('mediadownloader', 'settings/Personal', $parameters, '');
 	}
 
 	/**
@@ -89,7 +89,7 @@ class Personal implements ISettings
 	 */
 	public function getSection(): string
 	{
-		return 'ncdownloader';
+		return 'mediadownloader';
 	}
 
 	/**
