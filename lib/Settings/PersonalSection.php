@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OCA\NCDownloader\Settings;
+namespace OCA\MediaDownloader\Settings;
 
 use OCP\IL10N;
 use OCP\IURLGenerator;
@@ -26,11 +26,11 @@ class PersonalSection implements IIconSection {
 	}
 
 	public function getID(): string {
-		return 'ncdownloader';
+		return 'mediadownloader';
 	}
 
 	public function getName(): string {
-		return $this->l->t('NCDownloader Settings');
+		return $this->l->t('MediaDownloader Settings');
 	}
 
 	public function getPriority(): int {
