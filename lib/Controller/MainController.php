@@ -1,14 +1,14 @@
 <?php
 
-namespace OCA\NCDownloader\Controller;
+namespace OCA\MediaDownloader\Controller;
 
-use OCA\NCDownloader\Aria2\Aria2;
-use OCA\NCDownloader\Tools\Counters;
-use OCA\NCDownloader\Db\Helper as DbHelper;
-use OCA\NCDownloader\Tools\folderScan;
-use OCA\NCDownloader\Tools\Helper;
-use OCA\NCDownloader\Db\Settings;
-use OCA\NCDownloader\Ytdl\Ytdl;
+use OCA\MediaDownloader\Aria2\Aria2;
+use OCA\MediaDownloader\Tools\Counters;
+use OCA\MediaDownloader\Db\Helper as DbHelper;
+use OCA\MediaDownloader\Tools\folderScan;
+use OCA\MediaDownloader\Tools\Helper;
+use OCA\MediaDownloader\Db\Settings;
+use OCA\MediaDownloader\Ytdl\Ytdl;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\JSONResponse;
 use OCP\AppFramework\Http\TemplateResponse;
@@ -124,8 +124,8 @@ class MainController extends Controller
 
         $params['settings'] = json_encode([
             'is_admin' => $this->isAdmin,
-            'admin_url' => $this->urlGenerator->linkToRoute("settings.AdminSettings.index", ['section' => 'ncdownloader']),
-            'personal_url' => $this->urlGenerator->linkToRoute("settings.PersonalSettings.index", ['section' => 'ncdownloader']),
+            'admin_url' => $this->urlGenerator->linkToRoute("settings.AdminSettings.index", ['section' => 'mediadownloader']),
+            'personal_url' => $this->urlGenerator->linkToRoute("settings.PersonalSettings.index", ['section' => 'mediadownloader']),
             'ncd_hide_errors' => $this->hideError,
             'ncd_disable_bt' => $this->disable_bt_nonadmin,
             'ncd_downloader_dir' => Helper::getSettings("ncd_downloader_dir"),
