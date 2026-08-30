@@ -1,12 +1,12 @@
 <?php
 
-namespace OCA\NCDownloader\AppInfo;
+namespace OCA\MediaDownloader\AppInfo;
 
-use OCA\NCDownloader\Aria2\Aria2;
-use OCA\NCDownloader\Http\Client;
-use OCA\NCDownloader\Tools\Helper;
-use OCA\NCDownloader\Db\Settings;
-use OCA\NCDownloader\Ytdl\Ytdl;
+use OCA\MediaDownloader\Aria2\Aria2;
+use OCA\MediaDownloader\Http\Client;
+use OCA\MediaDownloader\Tools\Helper;
+use OCA\MediaDownloader\Db\Settings;
+use OCA\MediaDownloader\Ytdl\Ytdl;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IBootContext;
@@ -18,7 +18,7 @@ class Application extends App implements IBootstrap
 {
     public function __construct(array $urlParams = array())
     {
-        parent::__construct('ncdownloader', $urlParams);
+        parent::__construct('mediadownloader', $urlParams);
     }
     public function register(IRegistrationContext $context): void
     {
