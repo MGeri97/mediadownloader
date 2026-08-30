@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>mediadownloader</id>
+    <name>MediaDownloader</name>
+    <summary>Aria2 and yt-dlp web downloader for Nextcloud</summary>
+    <description>
+Based on the original NCDownloader app by jiaxinhuang (AGPL-licensed);
+Control Aria2 and manage download tasks from the web;
+Download videos from many popular video sites using yt-dlp (YouTube, Twitter, Facebook and more).
+    </description>
+    <version>1.0.24</version>
+    <licence>agpl</licence>
+    <author mail="freefallbenson@gmail.com" homepage="https://github.com/shiningw">jiaxinhuang</author>
+    <author mail="" homepage="https://github.com/MGeri97">MGeri97</author>
+    <namespace>MediaDownloader</namespace>
+    <category>tools</category>
+    <website>https://github.com/MGeri97/mediadownloader</website>
+    <bugs>https://github.com/MGeri97/mediadownloader/issues</bugs>
+    <screenshot>https://user-images.githubusercontent.com/3911975/142444998-54dd54a6-0c8e-4d49-8188-270964a99c50.png</screenshot>
+    <screenshot>https://user-images.githubusercontent.com/3911975/142445020-27ec389a-5437-4d28-acc0-5e757fd6897d.png</screenshot>
+    <repository>https://github.com/MGeri97/mediadownloader</repository>
+    <dependencies>
+        <php min-version="7.3" max-version="8.3" />
+        <nextcloud min-version="20" max-version="34"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>MediaDownloader</name>
+            <route>mediadownloader.Main.Index</route>
+            <icon>mediadownloader.svg</icon>
+        </navigation>
+    </navigations>
+    <settings>
+        <admin>OCA\MediaDownloader\Settings\Admin</admin>
+        <personal>OCA\MediaDownloader\Settings\Personal</personal>
+        <admin-section>OCA\MediaDownloader\Settings\AdminSection</admin-section>
+        <personal-section>OCA\MediaDownloader\Settings\PersonalSection</personal-section>
+    </settings>
+    <commands>
+        <command>OCA\MediaDownloader\Command\Aria2Command</command>
+    </commands>
+
+</info>

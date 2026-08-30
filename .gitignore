@@ -1,0 +1,8 @@
+/node_modules
+.sass-cache
+vendor
+build.sh
+test.php
+js/app*
+exclude
+bin
