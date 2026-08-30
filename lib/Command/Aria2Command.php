@@ -1,9 +1,9 @@
 <?php
 
-namespace OCA\NCDownloader\Command;
+namespace OCA\MediaDownloader\Command;
 
-use OCA\NCDownloader\Db\Helper as DbHelper;
-use OCA\NCDownloader\Tools\Helper;
+use OCA\MediaDownloader\Db\Helper as DbHelper;
+use OCA\MediaDownloader\Tools\Helper;
 use OC\Core\Command\Base;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
